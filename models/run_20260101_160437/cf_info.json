@@ -1,0 +1,18 @@
+{
+  "interactions_path": "data/interactions.parquet",
+  "models_dir": "models",
+  "seed": 42,
+  "n_factors": 100,
+  "n_epochs": 20,
+  "lr_all": 0.005,
+  "reg_all": 0.02,
+  "train_on_sample": false,
+  "sample_n": 2000000,
+  "rating_min": 0.5,
+  "rating_max": 5.0,
+  "trained_rows": 70513,
+  "num_users": 668,
+  "num_movies": 1322,
+  "trained_at_utc": "2026-01-01 23:41:50",
+  "model_type": "surprise_svd"
+}

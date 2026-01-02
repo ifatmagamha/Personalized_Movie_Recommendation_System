@@ -1,0 +1,17 @@
+{
+  "interactions_path": "data/interactions.parquet",
+  "movies_path": "data/movies.parquet",
+  "out_dir": "models",
+  "topn": 200,
+  "min_ratings": 20,
+  "bayes_m": 50,
+  "seed": 42,
+  "train_cf": true,
+  "cf_model": "svd",
+  "cf_factors": 100,
+  "cf_epochs": 20,
+  "cf_lr_all": 0.005,
+  "cf_reg_all": 0.02,
+  "run_id": "20260101_160437",
+  "utc_time": "20260101_160437"
+}
