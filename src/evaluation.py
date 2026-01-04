@@ -20,6 +20,7 @@ class EvalConfig:
     holdout: str = "last1"     # last1 | lastpct
     holdout_pct: float = 0.2
     max_users: int | None = 2000
+    candidate_pool: int = 2000
     seed: int = 42
 
 
@@ -85,6 +86,7 @@ def evaluate(
     test_df: pd.DataFrame,
     k: int = 10,
     mode: str = "baseline",
+    candidate_pool: int = 2000,
     max_users: int | None = 2000,
     seed: int = 42,
 ) -> pd.DataFrame:
@@ -108,7 +110,8 @@ def evaluate(
     rows = []
     for uid in users:
         relevant = user_to_relevant.get(int(uid), set())
-        recs_df = recommender.recommend(user_id=int(uid), k=k, mode=mode)
+        recs_df = recommender.recommend(user_id=int(uid), k=k, mode=mode, candidate_pool=candidate_pool,)
+
         recommended = recs_df["movieId"].astype(int).tolist() if "movieId" in recs_df.columns else []
 
         rows.append({
@@ -129,8 +132,9 @@ def main() -> None:
     parser.add_argument("--holdout", default="last1")          # last1|lastpct
     parser.add_argument("--holdout_pct", type=float, default=0.2)
     parser.add_argument("--max_users", type=int, default=2000)
+    parser.add_argument("--candidate_pool", type=int, default=2000, help="Number of candidate items considered for CF reranking")
     args = parser.parse_args()
-
+    
     cfg = EvalConfig(
         interactions_path=args.interactions,
         k=args.k,
@@ -138,7 +142,9 @@ def main() -> None:
         holdout=args.holdout,
         holdout_pct=args.holdout_pct,
         max_users=args.max_users,
+        candidate_pool=args.candidate_pool,
     )
+
 
     interactions = pd.read_parquet(cfg.interactions_path)
     train_df, test_df = split_by_user_time(interactions, holdout=cfg.holdout, holdout_pct=cfg.holdout_pct)
@@ -152,9 +158,11 @@ def main() -> None:
         test_df=test_df,
         k=cfg.k,
         mode=cfg.mode,
+        candidate_pool=cfg.candidate_pool,
         max_users=cfg.max_users,
         seed=cfg.seed,
     )
+
 
     summary = per_user[[f"recall@{cfg.k}", f"ndcg@{cfg.k}"]].mean(numeric_only=True)
     print("\n=== Summary ===")

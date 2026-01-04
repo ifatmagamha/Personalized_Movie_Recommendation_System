@@ -211,28 +211,29 @@ Based on similar MovieLens datasets:
 - **Training time**: 10-30 seconds on full dataset
 - **Prediction time**: <10ms per recommendation
 
-## Data Characteristics Summary
+## Summary
 
 ### Strengths
 ✓ Clean and complete data
+
 ✓ Low cold-start problem (3.6%)
+
 ✓ High user engagement (58.8% active users)
+
 ✓ Good catalog coverage (84% movies rated)
+
 ✓ Rich genre metadata (20 genres, avg 2.2/movie)
+
 ✓ Balanced rating distribution
+
 ✓ 20-year temporal span for analysis
 
 ### Challenges
-⚠ High sparsity (98.47%) - requires robust CF algorithm
-⚠ Long-tail movie distribution - need to balance popular vs niche
-⚠ Limited recent data (ends 2016) - may not reflect current preferences
-⚠ Sample has only 3.5 rating values - missing 4.0, 4.5, 5.0 in sample
+* High sparsity (98.47%) - requires robust CF algorithm
+* Long-tail movie distribution - need to balance popular vs niche
+* Limited recent data (ends 2016) - may not reflect current preferences
+* Sample has only 3.5 rating values - missing 4.0, 4.5, 5.0 in sample
 
-### Unique Insights
-💡 Lower mean rating (2.64) than typical datasets (3.5+)
-💡 43.5% of ratings are exactly 3.0 - strong central tendency
-💡 Top 10 movies only account for 2.3% - more democratic than Netflix
-💡 Drama appears in 50%+ of all movies
 
 ## Visualizations
 

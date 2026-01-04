@@ -33,7 +33,7 @@ class Recommender:
         self,
         models_dir: str = "models",
         interactions_path: str = "data/interactions.parquet",
-        interactions_df: Optional[pd.DataFrame] = None,  # <-- KEY FIX
+        interactions_df: Optional[pd.DataFrame] = None, 
     ) -> None:
         self.paths = ModelPaths(Path(models_dir))
         self.run_dir = self.paths.latest_run_dir()
@@ -48,8 +48,15 @@ class Recommender:
             raise FileNotFoundError(f"Missing artifact: {top_path}")
         self.top_global = pd.read_parquet(top_path)
 
+        movies_enriched_path = Path("data/movies_enriched.parquet")
         movies_path = self.run_dir / "movies.parquet"
-        self.movies = pd.read_parquet(movies_path) if movies_path.exists() else None
+
+        if movies_enriched_path.exists():
+            self.movies = pd.read_parquet(movies_enriched_path)
+        elif movies_path.exists():
+            self.movies = pd.read_parquet(movies_path)
+        else:
+            self.movies = None
 
         # CF
         self.cf_enabled = False
@@ -110,7 +117,8 @@ class Recommender:
         cols = [c for c in ["movieId", "bayes_score", "n_ratings", "avg_rating", "title", "genres"] if c in df.columns]
         return df[cols]
 
-    def recommend_cf(self, user_id: int, k: int = 10, candidate_pool: int = 500) -> pd.DataFrame:
+    def recommend_cf(self, user_id: int, k: int = 10, candidate_pool: int = 2000)-> pd.DataFrame:
+        
         if not self.cf_enabled or self.cf_model is None:
             return self.recommend_baseline(user_id=user_id, k=k)
 
@@ -137,20 +145,18 @@ class Recommender:
         cols = [c for c in ["movieId", "cf_score", "bayes_score", "n_ratings", "avg_rating", "title", "genres"] if c in cand.columns]
         return cand[cols]
 
-    def recommend(self, user_id: Optional[int], k: int = 10, mode: str = "auto") -> pd.DataFrame:
+
+    def recommend(self, user_id: int, k: int = 10, mode: str = "auto", candidate_pool: int = 2000) -> pd.DataFrame:
         mode = (mode or "auto").lower()
         if mode == "baseline":
             return self.recommend_baseline(user_id=user_id, k=k)
         if mode == "cf":
-            if user_id is None:
-                return self.recommend_baseline(user_id=None, k=k)
-            return self.recommend_cf(user_id=int(user_id), k=k)
+            return self.recommend_cf(user_id=user_id, k=k, candidate_pool=candidate_pool)
 
-        # auto
-        if user_id is not None and self.cf_enabled:
-            return self.recommend_cf(user_id=int(user_id), k=k)
+        # auto mode: use CF if available, else baseline
+        if self.cf_enabled and self.cf_model is not None:
+            return self.recommend_cf(user_id=user_id, k=k, candidate_pool=candidate_pool)
         return self.recommend_baseline(user_id=user_id, k=k)
-
 
 def load_recommender(
     models_dir: str = "models",

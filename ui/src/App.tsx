@@ -1,0 +1,180 @@
+import { useState } from "react";
+import { AnimatePresence } from "motion/react";
+
+import { HomeScreen } from "./components/HomeScreen";
+import { MoodInput } from "./components/MoodInput";
+import { ExploreFilters, FilterState } from "./components/ExploreFilters";
+import { ResultsScreen } from "./components/ResultsScreen";
+import { MovieDetail } from "./components/MovieDetail";
+
+import { recommend, sendFeedback } from "@/lib/api";
+import { mapMovieRecToUI } from "@/lib/mappers";
+import type { MovieUI } from "@/app/types";
+
+type AppScreen = "home" | "mood-input" | "explore-filters" | "results";
+
+type ActionType = "like" | "dislike" | "save" | "skip" | "helpful" | "not_helpful";
+
+export default function App() {
+  const [currentScreen, setCurrentScreen] = useState<AppScreen>("home");
+  const [selectedMovie, setSelectedMovie] = useState<MovieUI | null>(null);
+
+  const [moodInput, setMoodInput] = useState("");
+  const [isVoiceInput, setIsVoiceInput] = useState(false);
+
+  const [recommendedMovies, setRecommendedMovies] = useState<MovieUI[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  const userId = null; // future: brancher user profile
+
+  const handleBack = () => {
+    setCurrentScreen("home");
+    setSelectedMovie(null);
+    setErrorMsg(null);
+  };
+
+  const handleMovieSelect = (movie: MovieUI) => setSelectedMovie(movie);
+
+  const handleMoodSubmit = async (input: string, isVoice: boolean) => {
+    setMoodInput(input);
+    setIsVoiceInput(isVoice);
+    setErrorMsg(null);
+    setLoading(true);
+
+    try {
+      const res = await recommend({
+        user_id: userId,
+        query: input,
+        k: 12,
+        mode: "auto",
+        candidate_pool: 2000,
+      });
+
+      const uiMovies = (res.recommendations ?? []).map(mapMovieRecToUI);
+      setRecommendedMovies(uiMovies);
+      setCurrentScreen("results");
+    } catch (e: any) {
+      setErrorMsg(e?.message ?? "Failed to fetch recommendations");
+      setRecommendedMovies([]);
+      setCurrentScreen("results");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleApplyFilters = async (filters: FilterState) => {
+    setMoodInput("Filtered results");
+    setIsVoiceInput(false);
+    setErrorMsg(null);
+    setLoading(true);
+
+    try {
+      const res = await recommend({
+        user_id: userId,
+        k: 12,
+        mode: filters.isPersonalized ? "cf" : "baseline",
+        candidate_pool: 5000,
+        constraints: {
+          genres_in: filters.selectedGenres.length ? filters.selectedGenres : undefined,
+          genres_out: filters.excludedGenres.length ? filters.excludedGenres : undefined,
+          min_avg_rating: filters.minRating ?? undefined,
+          // min_n_ratings: (si tu veux l’ajouter dans UI plus tard)
+        },
+      });
+
+      const uiMovies = (res.recommendations ?? []).map(mapMovieRecToUI);
+      setRecommendedMovies(uiMovies);
+      setCurrentScreen("results");
+    } catch (e: any) {
+      setErrorMsg(e?.message ?? "Failed to fetch recommendations");
+      setRecommendedMovies([]);
+      setCurrentScreen("results");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Unified feedback sender (best effort)
+  const postFeedback = async (payload: { movieId: number; action: ActionType; context?: any }) => {
+    try {
+      await sendFeedback({
+        user_id: userId,
+        movieId: payload.movieId,
+        action: payload.action as any,
+        context: {
+          moodInput,
+          isVoice: isVoiceInput,
+          screen: currentScreen,
+          ...(payload.context ?? {}),
+        },
+      });
+    } catch {
+      // best effort (ne casse pas l’UX)
+    }
+  };
+
+  // From MovieDetail: helpful / not-helpful (string id from UI)
+  const handleFeedback = async (movieId: string, feedback: "helpful" | "not-helpful") => {
+    const mid = Number(movieId);
+    if (Number.isNaN(mid)) return;
+
+    await postFeedback({
+      movieId: mid,
+      action: feedback === "helpful" ? "helpful" : "not_helpful",
+      context: { source: "detail" },
+    });
+  };
+
+  return (
+    <div className="min-h-screen">
+      <AnimatePresence mode="wait">
+        {currentScreen === "home" && (
+          <HomeScreen
+            key="home"
+            onQuickRecommend={() => setCurrentScreen("explore-filters")}
+            onMoodInput={() => setCurrentScreen("mood-input")}
+          />
+        )}
+
+        {currentScreen === "mood-input" && (
+          <MoodInput key="mood-input" onSubmit={handleMoodSubmit} onBack={handleBack} />
+        )}
+
+        {currentScreen === "explore-filters" && (
+          <ExploreFilters key="explore-filters" onApplyFilters={handleApplyFilters} onBack={handleBack} />
+        )}
+
+        {currentScreen === "results" && (
+          <ResultsScreen
+            key="results"
+            movies={recommendedMovies}
+            moodInput={loading ? "loading…" : moodInput}
+            isVoice={isVoiceInput}
+            onSelectMovie={handleMovieSelect}
+            onBack={handleBack}
+            errorMsg={errorMsg}
+            loading={loading}
+            // like/dislike/save/skip from ResultsScreen
+            onAction={({ movieId, action, context }) =>
+              postFeedback({ movieId, action, context: { source: "results", ...(context ?? {}) } })
+            }
+          />
+        )}
+      </AnimatePresence>
+
+      {selectedMovie && (
+        <MovieDetail
+          movie={selectedMovie}
+          onClose={() => setSelectedMovie(null)}
+          // helpful / not-helpful from modal
+          onFeedback={handleFeedback}
+          // save from modal (MovieDetail calls with movie.movieId)
+          onAction={({ movieId, action, context }) =>
+            postFeedback({ movieId, action, context: { source: "detail", ...(context ?? {}) } })
+          }
+        />
+      )}
+    </div>
+  );
+}
