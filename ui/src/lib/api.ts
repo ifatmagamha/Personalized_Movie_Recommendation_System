@@ -48,7 +48,8 @@ export async function listGenres() {
     // credentials: "include",
   });
   if (!res.ok) throw new Error(`genres failed: ${res.status}`);
-  return (await res.json()) as string[];
+  const data = (await res.json()) as { genres: string[] };
+  return data.genres ?? [];
 }
 
 export async function sendFeedback(payload: {

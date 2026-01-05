@@ -1,4 +1,11 @@
-@import 'tailwindcss' source(none);
+@import 'tailwindcss';
+
+/* Scan all source files - Tailwind v4 CSS-first approach */
 @source '../**/*.{js,ts,jsx,tsx}';
 
+/* Explicitly include key directories for better scanning */
+@source '../app/**/*.{tsx,ts}';
+@source '../lib/**/*.{ts,tsx}';
+
+/* Import animation utilities */
 @import 'tw-animate-css';

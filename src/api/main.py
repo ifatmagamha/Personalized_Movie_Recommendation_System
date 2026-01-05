@@ -86,11 +86,11 @@ def recommend(req: RecommendRequest):
     r = get_recommender()
 
     intent = {"raw_query": req.query, "mood": None, "constraints": req.constraints or {}}
-    user_id = req.user_id if req.user_id is not None else -1
+    user_id = req.user_id  # Keep None if not provided, let recommender handle it
     mode = (req.mode or "auto").lower()
 
     base_df = r.recommend(
-        user_id=int(user_id),
+        user_id=user_id,
         k=int(req.k),
         mode=mode,
         candidate_pool=int(req.candidate_pool),

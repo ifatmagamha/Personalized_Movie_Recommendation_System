@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "motion/react";
-import { X, Calendar, Clock, User, ThumbsUp, ThumbsDown, Bookmark, BookmarkCheck } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Calendar, Clock, User, ThumbsUp, ThumbsDown, Bookmark, BookMarked } from "lucide-react";
 import { useState } from "react";
 import type { MovieUI } from "@/app/types";
 
@@ -9,8 +9,6 @@ interface MovieDetailProps {
   movie: MovieUI;
   onClose: () => void;
   onFeedback?: (movieId: string, feedback: "helpful" | "not-helpful") => void;
-
-  // pour envoyer "save" au backend (optional)
   onAction?: (payload: { movieId: number; action: ActionType; context?: any }) => void;
 }
 
@@ -43,7 +41,9 @@ export function MovieDetail({ movie, onClose, onFeedback, onAction }: MovieDetai
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       >
@@ -66,7 +66,7 @@ export function MovieDetail({ movie, onClose, onFeedback, onAction }: MovieDetai
 
               <div className="grid md:grid-cols-2">
                 <div className="relative h-[400px] md:h-auto">
-                  <img src={posterSrc} alt={movie.title} className="w-full h-full object-cover grayscale" />
+                  <img src={posterSrc} alt={movie.title} className="w-full h-full object-cover" />
                   <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-cyan-400/40 to-pink-400/40" />
                 </div>
 
@@ -142,7 +142,7 @@ export function MovieDetail({ movie, onClose, onFeedback, onAction }: MovieDetai
                       >
                         {saved ? (
                           <>
-                            <BookmarkCheck className="w-4 h-4" />
+                            <BookMarked className="w-4 h-4" />
                             <span className="text-sm">Saved</span>
                           </>
                         ) : (
@@ -186,7 +186,6 @@ export function MovieDetail({ movie, onClose, onFeedback, onAction }: MovieDetai
                     </div>
                   </div>
                 </div>
-
               </div>
             </motion.div>
           </div>

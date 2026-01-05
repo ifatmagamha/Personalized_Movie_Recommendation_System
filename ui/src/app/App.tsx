@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence } from "framer-motion";
 
 import { HomeScreen } from "./components/HomeScreen";
 import { MoodInput } from "./components/MoodInput";
@@ -78,8 +78,7 @@ export default function App() {
         constraints: {
           genres_in: filters.selectedGenres.length ? filters.selectedGenres : undefined,
           genres_out: filters.excludedGenres.length ? filters.excludedGenres : undefined,
-          min_avg_rating: filters.minRating ?? undefined,
-          // min_n_ratings: (si tu veux l’ajouter dans UI plus tard)
+          min_avg_rating: filters.minRating > 0 ? filters.minRating : undefined,
         },
       });
 
@@ -110,7 +109,7 @@ export default function App() {
         },
       });
     } catch {
-      // best effort (ne casse pas l’UX)
+      // best effort (ne casse pas l'UX)
     }
   };
 
@@ -127,7 +126,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-neutral-950">
       <AnimatePresence mode="wait">
         {currentScreen === "home" && (
           <HomeScreen
@@ -155,7 +154,6 @@ export default function App() {
             onBack={handleBack}
             errorMsg={errorMsg}
             loading={loading}
-            // like/dislike/save/skip from ResultsScreen
             onAction={({ movieId, action, context }) =>
               postFeedback({ movieId, action, context: { source: "results", ...(context ?? {}) } })
             }
@@ -167,9 +165,7 @@ export default function App() {
         <MovieDetail
           movie={selectedMovie}
           onClose={() => setSelectedMovie(null)}
-          // helpful / not-helpful from modal
           onFeedback={handleFeedback}
-          // save from modal (MovieDetail calls with movie.movieId)
           onAction={({ movieId, action, context }) =>
             postFeedback({ movieId, action, context: { source: "detail", ...(context ?? {}) } })
           }

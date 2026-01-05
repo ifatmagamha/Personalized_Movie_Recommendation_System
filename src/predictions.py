@@ -151,15 +151,17 @@ class Recommender:
         return cand[cols]
 
 
-    def recommend(self, user_id: int, k: int = 10, mode: str = "auto", candidate_pool: int = 2000) -> pd.DataFrame:
+    def recommend(self, user_id: Optional[int], k: int = 10, mode: str = "auto", candidate_pool: int = 2000) -> pd.DataFrame:
         mode = (mode or "auto").lower()
         if mode == "baseline":
             return self.recommend_baseline(user_id=user_id, k=k)
         if mode == "cf":
-            return self.recommend_cf(user_id=user_id, k=k, candidate_pool=candidate_pool)
+            # CF requires a valid user_id, use -1 as fallback if None
+            uid = user_id if user_id is not None else -1
+            return self.recommend_cf(user_id=uid, k=k, candidate_pool=candidate_pool)
 
-        # auto mode: use CF if available, else baseline
-        if self.cf_enabled and self.cf_model is not None:
+        # auto mode: use CF if available and user_id provided, else baseline
+        if self.cf_enabled and self.cf_model is not None and user_id is not None:
             return self.recommend_cf(user_id=user_id, k=k, candidate_pool=candidate_pool)
         return self.recommend_baseline(user_id=user_id, k=k)
 
