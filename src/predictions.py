@@ -36,13 +36,18 @@ class Recommender:
         interactions_df: Optional[pd.DataFrame] = None, 
     ) -> None:
         self.paths = ModelPaths(Path(models_dir))
-        self.run_dir = self.paths.latest_run_dir()
+
+        # Pre-check for artifacts
+        try:
+            self.run_dir = self.paths.latest_run_dir()
+        except FileNotFoundError as e:
+            raise RuntimeError("Missing model artifacts. Ensure training has been completed.") from e
 
         self.interactions_path = Path(interactions_path)
         self._interactions_df = interactions_df  # if provided, use it to build "seen"
         self._user_seen: Optional[Dict[int, set]] = None
 
-        # load artifacts
+        # Load artifacts with fallback
         top_path = self.run_dir / "top_global.parquet"
         if not top_path.exists():
             raise FileNotFoundError(f"Missing artifact: {top_path}")

@@ -1,31 +1,13 @@
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
-.env
-.DS_Store
-# =====================
-# Jupyter / Python
-# =====================
-.ipynb_checkpoints/
-__pycache__/
-*.pyc
 *.pyo
 
-# =====================
-# Environment
-# =====================
 .env
 .venv/
 venv/
 
-# =====================
-# OS / Editor
-# =====================
 .DS_Store
 
-# =====================
-# Logs / cache
-# =====================
 logs/
 .pytest_cache/
-

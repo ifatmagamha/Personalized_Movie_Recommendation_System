@@ -1,9 +1,5 @@
 from typing import List
-
-try:
-    from pydantic_settings import BaseSettings
-except ModuleNotFoundError:
-    from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
