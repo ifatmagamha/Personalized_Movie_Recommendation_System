@@ -37,44 +37,63 @@ class Recommender:
     ) -> None:
         self.paths = ModelPaths(Path(models_dir))
 
-        # Pre-check for artifacts
+        # 1. Always load data/movies_enriched.parquet first (Source of Truth for UI)
+        movies_enriched_path = Path("data/movies_enriched.parquet")
+        self.movies = None
+        if movies_enriched_path.exists():
+            print(f"[INFO] Loading enriched movies from {movies_enriched_path}")
+            self.movies = pd.read_parquet(movies_enriched_path)
+        
+        # 2. Try to load attributes from training run (Models)
+        self.top_global = None
+        self.cf_model = None
+        self.cf_enabled = False
+        
         try:
             self.run_dir = self.paths.latest_run_dir()
-        except FileNotFoundError as e:
-            raise RuntimeError("Missing model artifacts. Ensure training has been completed.") from e
+            
+            # Load baseline (top_global)
+            top_path = self.run_dir / "top_global.parquet"
+            if top_path.exists():
+                self.top_global = pd.read_parquet(top_path)
+            
+            # Load CF
+            cf_path = self.run_dir / "cf_svd.joblib"
+            if cf_path.exists():
+                try:
+                    import joblib
+                    self.cf_model = joblib.load(cf_path)
+                    self.cf_enabled = True
+                except Exception:
+                    print("[WARN] Failed to load CF model, skipping.")
+
+            # Fallback for movies if not enriched
+            if self.movies is None:
+                movies_path = self.run_dir / "movies.parquet"
+                if movies_path.exists():
+                    self.movies = pd.read_parquet(movies_path)
+
+        except Exception as e:
+            print(f"[WARN] Model artifacts not found or invalid ({e}). Running in DATA-ONLY mode.")
 
         self.interactions_path = Path(interactions_path)
-        self._interactions_df = interactions_df  # if provided, use it to build "seen"
+        self._interactions_df = interactions_df
         self._user_seen: Optional[Dict[int, set]] = None
 
-        # Load artifacts with fallback
-        top_path = self.run_dir / "top_global.parquet"
-        if not top_path.exists():
-            raise FileNotFoundError(f"Missing artifact: {top_path}")
-        self.top_global = pd.read_parquet(top_path)
+        # 3. Critical Fallback: If top_global is missing, create it from movies
+        if self.top_global is None:
+            if self.movies is not None:
+                # Create a dummy popularity table from available movies
+                print("[INFO] Creating fallback baseline from movies_enriched")
+                self.top_global = self.movies.copy()
+                # Ensure compatibility columns
+                for col in ["bayes_score", "n_ratings", "avg_rating"]:
+                    if col not in self.top_global.columns:
+                        self.top_global[col] = 0.0
+            else:
+                # Last resort empty
+                self.top_global = pd.DataFrame(columns=["movieId", "bayes_score"])
 
-        movies_enriched_path = Path("data/movies_enriched.parquet")
-        movies_path = self.run_dir / "movies.parquet"
-
-        if movies_enriched_path.exists():
-            self.movies = pd.read_parquet(movies_enriched_path)
-        elif movies_path.exists():
-            self.movies = pd.read_parquet(movies_path)
-        else:
-            self.movies = None
-
-        # CF
-        self.cf_enabled = False
-        self.cf_model = None
-        cf_path = self.run_dir / "cf_svd.joblib"
-        if cf_path.exists():
-            try:
-                import joblib
-                self.cf_model = joblib.load(cf_path)
-                self.cf_enabled = True
-            except Exception:
-                self.cf_model = None
-                self.cf_enabled = False
 
     def _load_user_seen(self) -> None:
         """
@@ -104,8 +123,47 @@ class Recommender:
 
     def _enrich(self, recs: pd.DataFrame) -> pd.DataFrame:
         if self.movies is None:
+            print("[WARN] _enrich: movies_enriched.parquet not loaded")
             return recs
-        return recs.merge(self.movies, on="movieId", how="left")
+        
+        if recs.empty:
+            return recs
+        
+        # Verify movieId column exists
+        if "movieId" not in recs.columns:
+            print("[ERROR] _enrich: recs missing 'movieId' column")
+            return recs
+        
+        if "movieId" not in self.movies.columns:
+            print("[ERROR] _enrich: movies missing 'movieId' column")
+            return recs
+        
+        # Identify columns to add (avoid duplicates/_x/_y suffixes)
+        # We always merge on 'movieId'
+        existing = set(recs.columns)
+        cols_to_add = [c for c in self.movies.columns if c not in existing and c != "movieId"]
+        
+        if not cols_to_add:
+            return recs
+        
+        # Perform merge and log results
+        merged = recs.merge(
+            self.movies[["movieId"] + cols_to_add], 
+            on="movieId", 
+            how="left"
+        )
+        
+        # Validate merge success
+        if len(merged) != len(recs):
+            print(f"[WARN] _enrich: merge changed row count {len(recs)} -> {len(merged)}")
+        
+        # Check how many movies were successfully enriched
+        enriched_count = merged["title"].notna().sum() if "title" in merged.columns else 0
+        poster_count = merged["poster"].notna().sum() if "poster" in merged.columns else 0
+        if enriched_count < len(merged):
+            print(f"[WARN] _enrich: only {enriched_count}/{len(merged)} movies have title, {poster_count}/{len(merged)} have poster")
+        
+        return merged
 
     def recommend_baseline(self, user_id: Optional[int], k: int = 10) -> pd.DataFrame:
         df = self.top_global.copy()
@@ -119,8 +177,13 @@ class Recommender:
         df = df.head(int(k)).copy()
         df = self._enrich(df)
 
-        cols = [c for c in ["movieId", "bayes_score", "n_ratings", "avg_rating", "title", "genres"] if c in df.columns]
-        return df[cols]
+        # Keep all columns after enrichment (including poster, description, etc.)
+        # Only filter out if they don't exist
+        cols = [c for c in [
+            "movieId", "bayes_score", "n_ratings", "avg_rating", "title", "genres",
+            "poster", "backdrop", "description", "year", "rating", "duration"
+        ] if c in df.columns]
+        return df[cols] if cols else df
 
     def recommend_cf(self, user_id: int, k: int = 10, candidate_pool: int = 2000)-> pd.DataFrame:
         
@@ -147,8 +210,12 @@ class Recommender:
         cand = cand.sort_values("cf_score", ascending=False).head(int(k)).copy()
         cand = self._enrich(cand)
 
-        cols = [c for c in ["movieId", "cf_score", "bayes_score", "n_ratings", "avg_rating", "title", "genres"] if c in cand.columns]
-        return cand[cols]
+        # Keep all columns after enrichment (including poster, description, etc.)
+        cols = [c for c in [
+            "movieId", "cf_score", "bayes_score", "n_ratings", "avg_rating", "title", "genres",
+            "poster", "backdrop", "description", "year", "rating", "duration"
+        ] if c in cand.columns]
+        return cand[cols] if cols else cand
 
 
     def recommend(self, user_id: Optional[int], k: int = 10, mode: str = "auto", candidate_pool: int = 2000) -> pd.DataFrame:

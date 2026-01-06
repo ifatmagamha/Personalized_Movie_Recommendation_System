@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import json
 from datetime import datetime
@@ -28,6 +29,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def root():
+    return RedirectResponse(url=f"{settings.ROOT_PATH}/docs")
 
 
 @app.get("/health")
@@ -96,6 +101,23 @@ def recommend(req: RecommendRequest):
         candidate_pool=int(req.candidate_pool),
     )
 
+    # Validate enrichment
+    if r.movies is None:
+        print("[WARN] movies_enriched.parquet not loaded - enrichment will fail")
+    else:
+        print(f"[INFO] Enrichment source loaded: {len(r.movies)} movies available")
+
+    required_cols = ["movieId", "title"]
+    missing = [c for c in required_cols if c not in base_df.columns]
+    if missing:
+        print(f"[ERROR] Missing required columns after enrichment: {missing}")
+    
+    # Check enrichment quality
+    if not base_df.empty:
+        has_poster = "poster" in base_df.columns and base_df["poster"].notna().any()
+        has_description = "description" in base_df.columns and base_df["description"].notna().any()
+        print(f"[INFO] Enrichment check: poster={has_poster}, description={has_description}, rows={len(base_df)}")
+
     # --- apply constraints ---
     c = req.constraints or {}
     df = apply_filters(
@@ -114,22 +136,29 @@ def recommend(req: RecommendRequest):
         
     recs = []
     for _, row in df.iterrows():
+        movie_id = int(row["movieId"])
         score = float(row.get("cf_score", row.get("bayes_score", 0.0)))
 
+        # Validate title exists (critical for UI)
+        title = _safe(row, "title", str)
+        if not title or title == "":
+            print(f"[WARN] movieId={movie_id} missing title after enrichment")
+            title = f"Movie {movie_id}"  # Fallback only for debugging
+
         recs.append({
-            "movieId": int(row["movieId"]),
-            "title": row.get("title", ""),
-            "genres": row.get("genres"),
+            "movieId": movie_id,
+            "title": title,
+            "genres": _safe(row, "genres", str),
             "score": score,
             "reason": _default_reason(mode),
 
-            # enrich fields (optional)
-            "year": (None if pd.isna(row.get("year")) else int(row.get("year")) ) if "year" in row else None,
-            "rating": (None if pd.isna(row.get("rating")) else float(row.get("rating")) ) if "rating" in row else None,
-            "description": row.get("description"),
-            "duration": (None if pd.isna(row.get("duration")) else int(row.get("duration")) ) if "duration" in row else None,
-            "poster": row.get("poster"),
-            "backdrop": row.get("backdrop"),
+            # enrich fields (use _safe helper for consistent null handling)
+            "year": _safe(row, "year", int),
+            "rating": _safe(row, "rating", float),
+            "description": _safe(row, "description", str),
+            "duration": _safe(row, "duration", int),
+            "poster": _safe(row, "poster", str),
+            "backdrop": _safe(row, "backdrop", str),
         })
 
 
@@ -149,4 +178,8 @@ def feedback(req: FeedbackRequest):
     with fp.open("a", encoding="utf-8") as f:
         f.write(json.dumps(payload, ensure_ascii=False) + "\n")
 
-    return {"status": "ok", "received": req.model_dump()}
+
+if __name__ == "__main__":
+    import uvicorn
+    # Use localhost for browser access (0.0.0.0 is not accessible from browsers)
+    uvicorn.run("src.api.main:app", host="127.0.0.1", port=8000, reload=True)

@@ -81,10 +81,31 @@ export function ResultsScreen({
   };
 
   const handleSwipeComplete = (direction: "left" | "right" | "up" | "down", movieId: number) => {
+    const action = direction === "right" ? "like" : 
+                   direction === "left" ? "dislike" : "skip";
+    
     if (direction === "right") handleLike(movieId);
     else if (direction === "left") handleDislike(movieId);
     else fireAction(movieId, "skip");
-
+    
+    // Check if we should trigger refinement (when 3 or fewer movies remain)
+    const remaining = movies.length - currentIndex - 1;
+    const shouldRefine = remaining <= 3;
+    
+    // Notify parent about swipe with refinement flag
+    onAction?.({
+      movieId,
+      action,
+      context: {
+        moodInput,
+        isVoice,
+        screen: "results",
+        index: currentIndex,
+        shouldRefine,
+      },
+    });
+    
+    // Advance to next movie
     if (currentIndex < movies.length - 1) {
       setTimeout(() => setCurrentIndex(currentIndex + 1), 300);
     }

@@ -23,10 +23,13 @@ const FALLBACK_POSTER =
 `);
 
 export function mapMovieRecToUI(m: MovieRec): MovieUI {
+  // Handle poster: use fallback if null, undefined, or empty string
+  const poster = (m.poster && m.poster.trim().length > 0) ? m.poster : FALLBACK_POSTER;
+  
   return {
     id: String(m.movieId),
     movieId: m.movieId,
-    title: m.title,
+    title: m.title || `Movie ${m.movieId}`, // Fallback title if missing
     year: m.year ?? null,
 
     genres: splitGenres(m.genres),
@@ -34,7 +37,7 @@ export function mapMovieRecToUI(m: MovieRec): MovieUI {
     description: m.description ?? null,
     duration: m.duration ?? null,
 
-    poster: m.poster ?? FALLBACK_POSTER,
+    poster: poster,
     backdrop: m.backdrop ?? null,
 
     // defaults ui-safe

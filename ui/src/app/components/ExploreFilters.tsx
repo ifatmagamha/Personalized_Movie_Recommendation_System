@@ -26,24 +26,47 @@ export function ExploreFilters({ onApplyFilters, onBack }: ExploreFiltersProps) 
   const [minRating, setMinRating] = useState([5.0]);
   const [minPopularity, setMinPopularity] = useState([50]);
   const [isPersonalized, setIsPersonalized] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    listGenres()
-      .then((g) => setAvailableGenres(g ?? []))
-      .catch(() => setAvailableGenres([]));
+    loadGenres();
   }, []);
 
-  const toggleGenre = (genreName: string, type: "include" | "exclude") => {
-    if (type === "include") {
-      setExcludedGenres((prev) => prev.filter((x) => x !== genreName));
-      setSelectedGenres((prev) =>
-        prev.includes(genreName) ? prev.filter((x) => x !== genreName) : [...prev, genreName]
-      );
-    } else {
+  const loadGenres = () => {
+    setLoading(true);
+    setError(null);
+    listGenres()
+      .then((g) => {
+        if (g && g.length > 0) {
+          setAvailableGenres(g);
+          setError(null);
+        } else {
+          setError("No genres available. Check backend connection.");
+          setAvailableGenres([]);
+        }
+      })
+      .catch((err) => {
+        console.error("[ExploreFilters] Failed to load genres:", err);
+        setError(`Failed to load genres: ${err.message || "Unknown error"}`);
+        setAvailableGenres([]);
+      })
+      .finally(() => setLoading(false));
+  };
+
+  const cycleGenre = (genreName: string) => {
+    if (selectedGenres.includes(genreName)) {
+      // Included -> Excluded
       setSelectedGenres((prev) => prev.filter((x) => x !== genreName));
-      setExcludedGenres((prev) =>
-        prev.includes(genreName) ? prev.filter((x) => x !== genreName) : [...prev, genreName]
-      );
+      setExcludedGenres((prev) => [...prev, genreName]);
+    } else if (excludedGenres.includes(genreName)) {
+      // Excluded -> None
+      setExcludedGenres((prev) => prev.filter((x) => x !== genreName));
+    } else {
+      // None -> Included
+      setSelectedGenres((prev) => [...prev, genreName]);
+      // Safety: ensure it's not in excluded (though mutually exclusive logic helps)
+      setExcludedGenres((prev) => prev.filter((x) => x !== genreName));
     }
   };
 
@@ -111,47 +134,53 @@ export function ExploreFilters({ onApplyFilters, onBack }: ExploreFiltersProps) 
 
           {/* Genre Selection */}
           <div className="mb-12">
-            <div className="mb-6">
-              <h3 className="mb-2 text-neutral-50">genres</h3>
-              <p className="text-sm text-neutral-500">click to include, click again to exclude</p>
+            <div className="mb-6 flex justify-between items-end">
+              <div>
+                <h3 className="mb-2 text-neutral-50">genres</h3>
+                <p className="text-sm text-neutral-500">click to include (+), click again to exclude (-), click again to reset</p>
+              </div>
+              {loading && <span className="text-xs text-neutral-600 animate-pulse">syncing database...</span>}
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              {availableGenres.map((name) => {
-                const state = getGenreState(name);
-                return (
-                  <div key={name} className="relative group">
+            {loading ? (
+              <div className="flex flex-wrap gap-3">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                  <div key={i} className="h-10 w-24 bg-neutral-900/50 rounded-sm animate-pulse" />
+                ))}
+              </div>
+            ) : error ? (
+              <div className="text-red-400 text-sm bg-red-500/10 p-4 rounded-md border border-red-500/20 flex items-center justify-between">
+                <span>{error}</span>
+                <button onClick={loadGenres} className="text-neutral-50 underline hover:text-white">retry</button>
+              </div>
+            ) : (
+              <div className="flex flex-wrap gap-3">
+                {availableGenres.map((name) => {
+                  const state = getGenreState(name);
+                  return (
                     <button
-                      onClick={() => toggleGenre(name, "include")}
+                      key={name}
+                      onClick={() => cycleGenre(name)}
                       className={`
-                        px-5 py-3 rounded-sm text-sm transition-all border
+                        px-5 py-3 rounded-sm text-sm transition-all border flex items-center gap-2
                         ${state === "included"
                           ? "bg-pink-500/20 text-pink-400 border-pink-500/50"
                           : state === "excluded"
-                          ? "bg-neutral-800/50 text-neutral-600 border-neutral-700 line-through"
-                          : "bg-neutral-900/50 border-neutral-800 text-neutral-400 hover:border-neutral-600"
+                            ? "bg-red-900/20 text-red-400 border-red-500/30 line-through decoration-red-400/50"
+                            : "bg-neutral-900/50 border-neutral-800 text-neutral-400 hover:border-neutral-600 hover:text-neutral-200"
                         }
                       `}
                     >
                       {name}
-                      {state === "included" && <Plus className="inline-block w-3 h-3 ml-1" />}
-                      {state === "excluded" && <Minus className="inline-block w-3 h-3 ml-1" />}
+                      {state === "included" && <Plus className="w-3 h-3" />}
+                      {state === "excluded" && <Minus className="w-3 h-3" />}
                     </button>
+                  );
+                })}
+              </div>
+            )}
 
-                    {state === "included" && (
-                      <button
-                        onClick={() => toggleGenre(name, "exclude")}
-                        className="absolute -top-2 -right-2 w-5 h-5 bg-neutral-800 border border-neutral-700 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <Minus className="w-3 h-3 text-neutral-400" />
-                      </button>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {(selectedGenres.length > 0 || excludedGenres.length > 0) && (
+            {!loading && !error && (selectedGenres.length > 0 || excludedGenres.length > 0) && (
               <button
                 onClick={() => {
                   setSelectedGenres([]);
