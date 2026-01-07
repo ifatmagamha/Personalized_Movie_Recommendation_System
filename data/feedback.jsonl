@@ -1,0 +1,394 @@
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:48.126535"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:48.129882"}
+{"user_id": null, "movieId": 1198, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:49.331138"}
+{"user_id": null, "movieId": 1198, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:49.641798"}
+{"user_id": null, "movieId": 260, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:51.685572"}
+{"user_id": null, "movieId": 260, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:52.001361"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:53.268272"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:53.573466"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:55.094280"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:55.399646"}
+{"user_id": null, "movieId": 1213, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:56.663573"}
+{"user_id": null, "movieId": 1213, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:56.968093"}
+{"user_id": null, "movieId": 296, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:58.545484"}
+{"user_id": null, "movieId": 296, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:58.852436"}
+{"user_id": null, "movieId": 2959, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:02:59.941778"}
+{"user_id": null, "movieId": 2959, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:00.245957"}
+{"user_id": null, "movieId": 356, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:01.475187"}
+{"user_id": null, "movieId": 356, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:01.780601"}
+{"user_id": null, "movieId": 912, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:02.909116"}
+{"user_id": null, "movieId": 912, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:03.210592"}
+{"user_id": null, "movieId": 2858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:05.175986"}
+{"user_id": null, "movieId": 2858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:05.487609"}
+{"user_id": null, "movieId": 904, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:07.828465"}
+{"user_id": null, "movieId": 904, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:08.135858"}
+{"user_id": null, "movieId": 1197, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:09.112823"}
+{"user_id": null, "movieId": 1197, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:09.418940"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:23.971921"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:24.277077"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:25.668663"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:25.971621"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:27.035457"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:27.344430"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:28.459920"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:28.762895"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:29.644320"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:29.943442"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:30.666844"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:30.977349"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:31.830016"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:32.132942"}
+{"user_id": null, "movieId": 593, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:32.859002"}
+{"user_id": null, "movieId": 593, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:33.164706"}
+{"user_id": null, "movieId": 1196, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:34.221949"}
+{"user_id": null, "movieId": 1196, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:34.527758"}
+{"user_id": null, "movieId": 1198, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:36.497760"}
+{"user_id": null, "movieId": 1198, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:36.807413"}
+{"user_id": null, "movieId": 260, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:38.672122"}
+{"user_id": null, "movieId": 260, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:38.983126"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:40.153089"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:40.457249"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:41.205979"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:41.514403"}
+{"user_id": null, "movieId": 1193, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:42.533055"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:44.710244"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:44.710970"}
+{"user_id": null, "movieId": 1213, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:45.676715"}
+{"user_id": null, "movieId": 1213, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:45.982187"}
+{"user_id": null, "movieId": 296, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:46.885401"}
+{"user_id": null, "movieId": 296, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:47.191002"}
+{"user_id": null, "movieId": 2959, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:48.093712"}
+{"user_id": null, "movieId": 2959, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:48.403091"}
+{"user_id": null, "movieId": 356, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:49.255426"}
+{"user_id": null, "movieId": 356, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:49.565779"}
+{"user_id": null, "movieId": 912, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:50.892006"}
+{"user_id": null, "movieId": 912, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:51.197536"}
+{"user_id": null, "movieId": 2858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:52.003439"}
+{"user_id": null, "movieId": 2858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:52.309194"}
+{"user_id": null, "movieId": 904, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:53.538411"}
+{"user_id": null, "movieId": 904, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:53.843371"}
+{"user_id": null, "movieId": 1197, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:54.857596"}
+{"user_id": null, "movieId": 1197, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:55.163314"}
+{"user_id": null, "movieId": 541, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:56.626836"}
+{"user_id": null, "movieId": 541, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:56.935915"}
+{"user_id": null, "movieId": 1252, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:58.016012"}
+{"user_id": null, "movieId": 1252, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:58.321963"}
+{"user_id": null, "movieId": 48516, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:59.654946"}
+{"user_id": null, "movieId": 48516, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:03:59.961491"}
+{"user_id": null, "movieId": 47, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:00.688736"}
+{"user_id": null, "movieId": 47, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:01.003184"}
+{"user_id": null, "movieId": 110, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:02.246982"}
+{"user_id": null, "movieId": 110, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:02.549096"}
+{"user_id": null, "movieId": 1704, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:03.390576"}
+{"user_id": null, "movieId": 1704, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:03.695047"}
+{"user_id": null, "movieId": 2762, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:04.333357"}
+{"user_id": null, "movieId": 2762, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:04.639924"}
+{"user_id": null, "movieId": 4993, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:05.294831"}
+{"user_id": null, "movieId": 4993, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:05.597582"}
+{"user_id": null, "movieId": 1200, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:06.231672"}
+{"user_id": null, "movieId": 1200, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:06.533779"}
+{"user_id": null, "movieId": 3000, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:07.182908"}
+{"user_id": null, "movieId": 3000, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:07.492002"}
+{"user_id": null, "movieId": 1617, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:08.105401"}
+{"user_id": null, "movieId": 1617, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:08.412156"}
+{"user_id": null, "movieId": 908, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:09.057795"}
+{"user_id": null, "movieId": 908, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:09.360453"}
+{"user_id": null, "movieId": 79132, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:10.112275"}
+{"user_id": null, "movieId": 79132, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:10.422587"}
+{"user_id": null, "movieId": 2324, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:11.055892"}
+{"user_id": null, "movieId": 2324, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:11.364307"}
+{"user_id": null, "movieId": 293, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:12.117116"}
+{"user_id": null, "movieId": 293, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:12.427403"}
+{"user_id": null, "movieId": 58559, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:13.444940"}
+{"user_id": null, "movieId": 58559, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:13.748954"}
+{"user_id": null, "movieId": 7153, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:14.542101"}
+{"user_id": null, "movieId": 7153, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:14.851455"}
+{"user_id": null, "movieId": 5618, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:15.596495"}
+{"user_id": null, "movieId": 5618, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:15.902603"}
+{"user_id": null, "movieId": 5952, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:16.811395"}
+{"user_id": null, "movieId": 5952, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:17.118214"}
+{"user_id": null, "movieId": 1172, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:18.070774"}
+{"user_id": null, "movieId": 1172, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:18.373547"}
+{"user_id": null, "movieId": 1219, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:19.067764"}
+{"user_id": null, "movieId": 1219, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:19.375001"}
+{"user_id": null, "movieId": 1234, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:20.082650"}
+{"user_id": null, "movieId": 1234, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:20.391000"}
+{"user_id": null, "movieId": 1089, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:21.081402"}
+{"user_id": null, "movieId": 1089, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:21.386762"}
+{"user_id": null, "movieId": 750, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:22.817314"}
+{"user_id": null, "movieId": 750, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:22.870845"}
+{"user_id": null, "movieId": 2329, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:24.658288"}
+{"user_id": null, "movieId": 1222, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:26.361323"}
+{"user_id": null, "movieId": 1222, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:26.363878"}
+{"user_id": null, "movieId": 1222, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:28.109813"}
+{"user_id": null, "movieId": 1222, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T02:04:28.109813"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T18:52:29.695482"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T18:52:29.697529"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T18:52:31.453137"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T18:52:31.453137"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:32.251779"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:32.556290"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:33.710496"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:33.711110"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:34.841596"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:35.148685"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:36.265013"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T19:11:36.577559"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:37.889651"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:37.890156"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:39.544722"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:39.544722"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:40.504129"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:40.810164"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:49.709921"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:50.012740"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:51.062482"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:51.366979"}
+{"user_id": null, "movieId": 50, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:52.292707"}
+{"user_id": null, "movieId": 50, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:52.603916"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:53.222183"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:01:53.529208"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:29.465416"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:29.472003"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:31.125220"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:31.125220"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:32.326795"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:32.637637"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:33.927812"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:34.235134"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:37.245088"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:37.550662"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:38.915668"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:39.221885"}
+{"user_id": null, "movieId": 1193, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:40.524165"}
+{"user_id": null, "movieId": 1193, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:40.524165"}
+{"user_id": null, "movieId": 1213, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:43.498850"}
+{"user_id": null, "movieId": 1213, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:15:43.498850"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:10.176118"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:10.487262"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:12.056119"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:12.367741"}
+{"user_id": null, "movieId": 260, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:14.576744"}
+{"user_id": null, "movieId": 260, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:14.881404"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:30.085095"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:30.087064"}
+{"user_id": null, "movieId": 318, "action": "save", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-06T20:16:33.665486"}
+{"user_id": null, "movieId": 318, "action": "helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-06T20:16:35.579692"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:39.029205"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:39.030776"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:40.662020"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:40.977429"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:42.100115"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:42.413331"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:43.586220"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:43.898816"}
+{"user_id": null, "movieId": 1136, "action": "helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-06T20:16:47.299227"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:50.769330"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:50.771643"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:51.687536"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:51.996479"}
+{"user_id": null, "movieId": 593, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:56.021476"}
+{"user_id": null, "movieId": 593, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:56.327656"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:58.750628"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:16:59.055413"}
+{"user_id": null, "movieId": 1198, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:02.155331"}
+{"user_id": null, "movieId": 1198, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:02.155331"}
+{"user_id": null, "movieId": 260, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:03.733436"}
+{"user_id": null, "movieId": 260, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:03.733436"}
+{"user_id": null, "movieId": 923, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:04.609177"}
+{"user_id": null, "movieId": 923, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:04.918202"}
+{"user_id": null, "movieId": 296, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:05.835078"}
+{"user_id": null, "movieId": 296, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:06.145266"}
+{"user_id": null, "movieId": 2959, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:07.109755"}
+{"user_id": null, "movieId": 2959, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:07.422465"}
+{"user_id": null, "movieId": 356, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:08.265260"}
+{"user_id": null, "movieId": 356, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:08.571008"}
+{"user_id": null, "movieId": 912, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:09.525136"}
+{"user_id": null, "movieId": 912, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-06T20:17:09.825217"}
+{"user_id": 9995, "movieId": 1, "action": "like", "context": null, "_ts": "2026-01-07T07:41:25.901930"}
+{"user_id": 9995, "movieId": 2, "action": "like", "context": null, "_ts": "2026-01-07T07:41:27.957636"}
+{"user_id": 9995, "movieId": 3, "action": "like", "context": null, "_ts": "2026-01-07T07:41:29.986727"}
+{"user_id": 9995, "movieId": 4, "action": "like", "context": null, "_ts": "2026-01-07T07:41:32.026369"}
+{"user_id": 9995, "movieId": 5, "action": "like", "context": null, "_ts": "2026-01-07T07:41:34.072624"}
+{"user_id": 9995, "movieId": 1, "action": "like", "context": null, "_ts": "2026-01-07T07:42:02.536586"}
+{"user_id": 9995, "movieId": 2, "action": "like", "context": null, "_ts": "2026-01-07T07:42:04.552945"}
+{"user_id": 9995, "movieId": 3, "action": "like", "context": null, "_ts": "2026-01-07T07:42:06.584070"}
+{"user_id": 9995, "movieId": 4, "action": "like", "context": null, "_ts": "2026-01-07T07:42:08.623816"}
+{"user_id": 9995, "movieId": 5, "action": "like", "context": null, "_ts": "2026-01-07T07:42:10.666697"}
+{"user_id": 9995, "movieId": 1, "action": "like", "context": null, "_ts": "2026-01-07T07:42:32.165637"}
+{"user_id": 9995, "movieId": 2, "action": "like", "context": null, "_ts": "2026-01-07T07:42:34.212144"}
+{"user_id": 9995, "movieId": 3, "action": "like", "context": null, "_ts": "2026-01-07T07:42:36.245617"}
+{"user_id": 9995, "movieId": 4, "action": "like", "context": null, "_ts": "2026-01-07T07:42:38.263105"}
+{"user_id": 9995, "movieId": 5, "action": "like", "context": null, "_ts": "2026-01-07T07:42:40.298738"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:25.722251"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:25.729098"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:28.251576"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:28.249575"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:29.201519"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:29.514759"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:30.550650"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:30.851839"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:34.186061"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:35.799915"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:35.801070"}
+{"user_id": null, "movieId": 593, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:36.534247"}
+{"user_id": null, "movieId": 593, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:36.846385"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:37.726671"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:38.048632"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:39.768415"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:40.078074"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:41.428702"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:41.742677"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:45.686171"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:45.995426"}
+{"user_id": null, "movieId": 1213, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:46.850468"}
+{"user_id": null, "movieId": 1213, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:46.853303"}
+{"user_id": null, "movieId": 1196, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:48.442688"}
+{"user_id": null, "movieId": 1196, "action": "dislike", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:48.442688"}
+{"user_id": null, "movieId": 1198, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:49.483136"}
+{"user_id": null, "movieId": 1198, "action": "like", "context": {"moodInput": "restless energy, need something tense but not scary", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:04:49.789282"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:24.948777"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:25.255211"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:26.190308"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:26.496145"}
+{"user_id": null, "movieId": 50, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:33.756240"}
+{"user_id": null, "movieId": 50, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:34.059202"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:35.024133"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:35.328763"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:36.289354"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:36.587729"}
+{"user_id": null, "movieId": 296, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:41.668714"}
+{"user_id": null, "movieId": 296, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:41.976955"}
+{"user_id": null, "movieId": 2959, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:43.474846"}
+{"user_id": null, "movieId": 2959, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:05:43.782241"}
+{"user_id": 9995, "movieId": 1, "action": "like", "context": null, "_ts": "2026-01-07T08:13:46.495228"}
+{"user_id": 9995, "movieId": 2, "action": "like", "context": null, "_ts": "2026-01-07T08:13:48.523023"}
+{"user_id": 9995, "movieId": 3, "action": "like", "context": null, "_ts": "2026-01-07T08:13:50.555411"}
+{"user_id": 9995, "movieId": 4, "action": "like", "context": null, "_ts": "2026-01-07T08:13:52.578146"}
+{"user_id": 9995, "movieId": 5, "action": "like", "context": null, "_ts": "2026-01-07T08:13:54.605636"}
+{"user_id": 9995, "movieId": 1, "action": "like", "context": null, "_ts": "2026-01-07T08:16:03.821283"}
+{"user_id": 9995, "movieId": 2, "action": "like", "context": null, "_ts": "2026-01-07T08:16:05.855576"}
+{"user_id": 9995, "movieId": 3, "action": "like", "context": null, "_ts": "2026-01-07T08:16:07.894761"}
+{"user_id": 9995, "movieId": 4, "action": "like", "context": null, "_ts": "2026-01-07T08:16:09.929556"}
+{"user_id": 9995, "movieId": 5, "action": "like", "context": null, "_ts": "2026-01-07T08:16:11.940316"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:37.036883"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:37.048922"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:39.176138"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:39.180139"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:50.452280"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:50.459251"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:52.422307"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:52.422730"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:53.805893"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:53.812810"}
+{"user_id": null, "movieId": 260, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:55.000217"}
+{"user_id": null, "movieId": 260, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:21:55.001599"}
+{"user_id": null, "movieId": 50, "action": "save", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T08:22:10.749439"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:33.054923"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:33.054923"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:36.151737"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:36.151737"}
+{"user_id": null, "movieId": 50, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:38.171206"}
+{"user_id": null, "movieId": 50, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:38.171206"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:40.048725"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "feeling melancholic, want something slow and beautiful", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:22:40.054116"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:38.850463"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:38.852269"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:39.968235"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:39.966209"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:42.407538"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:43.766323"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:43.766323"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:45.014858"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:45.016836"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:46.268749"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:46.268749"}
+{"user_id": null, "movieId": 593, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:47.573064"}
+{"user_id": null, "movieId": 593, "action": "dislike", "context": {"moodInput": "i want  somthing chill, a feel good recent  movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:23:47.573064"}
+{"user_id": null, "movieId": 92259, "action": "like", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:07.903139"}
+{"user_id": null, "movieId": 92259, "action": "dislike", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:09.304558"}
+{"user_id": null, "movieId": 92259, "action": "dislike", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:09.316508"}
+{"user_id": null, "movieId": 109374, "action": "like", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:11.973811"}
+{"user_id": null, "movieId": 78499, "action": "like", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:13.635056"}
+{"user_id": null, "movieId": 78499, "action": "like", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:13.635056"}
+{"user_id": null, "movieId": 91542, "action": "like", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:17.773185"}
+{"user_id": null, "movieId": 91542, "action": "like", "context": {"moodInput": "i want somthing chill a feel good recent movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:50:17.773185"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want to cry, black and white movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:14.850746"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want to cry, black and white movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:14.853618"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "i want to cry, black and white movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:17.003582"}
+{"user_id": null, "movieId": 858, "action": "dislike", "context": {"moodInput": "i want to cry, black and white movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:17.003582"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want to cry, black and white movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:18.124004"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want to cry, black and white movie", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:18.124004"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:37.678561"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:37.689223"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:39.004364"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:39.004364"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:40.900486"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:40.905336"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:42.100114"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:42.100114"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:43.303062"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T08:51:43.303062"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:15.038804"}
+{"user_id": null, "movieId": 318, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:15.042905"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:18.327745"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:18.328286"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:20.759917"}
+{"user_id": null, "movieId": 527, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:20.767449"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:22.077773"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:22.078785"}
+{"user_id": null, "movieId": 923, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:24.750685"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:25.947450"}
+{"user_id": null, "movieId": 50, "action": "dislike", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:25.947450"}
+{"user_id": null, "movieId": 593, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:27.260680"}
+{"user_id": null, "movieId": 593, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:05:27.260112"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:25.382702"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:25.394597"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:26.616722"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:26.616722"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:27.788873"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:27.788873"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:28.925521"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:28.925521"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:54.615403"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:54.615403"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:55.765494"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:55.765494"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:56.848064"}
+{"user_id": null, "movieId": 527, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:56.849673"}
+{"user_id": null, "movieId": 608, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:58.277348"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:59.360539"}
+{"user_id": null, "movieId": 923, "action": "like", "context": {"moodInput": "a movie around feminisim", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:07:59.361769"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:27.149304"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:27.150264"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:28.436373"}
+{"user_id": null, "movieId": 608, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:28.436373"}
+{"user_id": null, "movieId": 296, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:29.686361"}
+{"user_id": null, "movieId": 296, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:29.686361"}
+{"user_id": null, "movieId": 356, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:30.904449"}
+{"user_id": null, "movieId": 912, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:32.153095"}
+{"user_id": null, "movieId": 912, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:32.153095"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:33.292699"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:33.293320"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:36.022831"}
+{"user_id": null, "movieId": 1221, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:36.022831"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:39.250102"}
+{"user_id": null, "movieId": 1193, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:39.244995"}
+{"user_id": null, "movieId": 1213, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:40.472769"}
+{"user_id": null, "movieId": 1213, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:40.472769"}
+{"user_id": null, "movieId": 2959, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:41.625237"}
+{"user_id": null, "movieId": 2959, "action": "dislike", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T09:08:41.625237"}
+{"user_id": null, "movieId": 608, "action": "save", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T09:08:49.660658"}
+{"user_id": null, "movieId": 608, "action": "helpful", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "matches", "source": "detail"}, "_ts": "2026-01-07T09:08:50.821936"}
+{"user_id": null, "movieId": 608, "action": "not_helpful", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "matches", "source": "detail"}, "_ts": "2026-01-07T09:08:51.576334"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:31.419158"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:31.434036"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:32.667565"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:32.670517"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:34.013577"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:34.014604"}
+{"user_id": null, "movieId": 1198, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:35.282458"}
+{"user_id": null, "movieId": 1198, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:35.285530"}
+{"user_id": null, "movieId": 1198, "action": "save", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T17:09:43.138292"}
+{"user_id": null, "movieId": 1198, "action": "helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-07T17:09:44.384786"}
+{"user_id": null, "movieId": 1198, "action": "not_helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-07T17:09:45.396957"}

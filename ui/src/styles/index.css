@@ -1,0 +1,16 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Ensure body has proper background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #030213; /* neutral-950 equivalent */
+  color: #fafafa; /* neutral-50 equivalent */
+}
+
+#root {
+  min-height: 100vh;
+}

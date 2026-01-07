@@ -1,0 +1,92 @@
+[
+    {
+        "query": "I want to cry today",
+        "expected": {
+            "mood": "sad",
+            "genres": [
+                "Drama"
+            ]
+        }
+    },
+    {
+        "query": "Something mind-blowing from the 90s",
+        "expected": {
+            "mood": "tense",
+            "genres": [
+                "Sci-Fi",
+                "Mystery"
+            ],
+            "year_range": [
+                1990,
+                1999
+            ]
+        }
+    },
+    {
+        "query": "Date night, nothing heavy",
+        "expected": {
+            "mood": "happy",
+            "genres": [
+                "Comedy",
+                "Romance"
+            ]
+        }
+    },
+    {
+        "query": "I want something chill, a feel good recent movie",
+        "expected": {
+            "mood": "happy",
+            "genres": [
+                "Comedy",
+                "Animation",
+                "Romance"
+            ],
+            "year_range": [
+                2010,
+                2015
+            ]
+        }
+    },
+    {
+        "query": "scary horror movies",
+        "expected": {
+            "mood": "tense",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        }
+    },
+    {
+        "query": "90s action packed adventure",
+        "expected": {
+            "mood": "happy",
+            "genres": [
+                "Action",
+                "Adventure"
+            ],
+            "year_range": [
+                1990,
+                1999
+            ]
+        }
+    },
+    {
+        "query": "intellectual documentary about space",
+        "expected": {
+            "mood": "neutral",
+            "genres": [
+                "Documentary"
+            ]
+        }
+    },
+    {
+        "query": "western movies to watch tonight",
+        "expected": {
+            "mood": "neutral",
+            "genres": [
+                "Western"
+            ]
+        }
+    }
+]

@@ -1,5 +1,30 @@
 .ipynb_checkpoints/
 __pycache__/
 *.pyc
+*.pyo
+
 .env
+!ui/.env
+.venv/
+venv/
+
 .DS_Store
+
+logs/
+.pytest_cache/
+
+# System logs
+*.log
+*.txt
+!requirements.txt
+!eval_results.txt
+!eval_results_fixed.txt
+
+# Build / Run Artifacts
+models/run_*
+data/feedback.jsonl
+data/interactions.parquet
+node_modules/
+dist/
+build/
+.next/
