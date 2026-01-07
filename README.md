@@ -74,20 +74,7 @@ The development followed an agile, iterative process divided into four key phase
 
 ---
 
-## 4. System Workflow 
-
-```mermaid
-graph TD
-    A[User Request] -->|Natural Language| B(LLM Intent Parser);
-    B -->|Generates JSON| C{Reasoning Engine};
-    C -->|Extracts Constraints| D[Hybrid Recommender];
-    D -->|User History > 5?| E{Check Profile};
-    E -- Yes --> F[SVD Model];
-    E -- No --> G[Bayesian Baseline];
-    F & G --> H[Top-K Candidates];
-    H -->|Apply JSON Filters| I[Final Ranking];
-    I -->|Enrich Metadata| J[JSON Response];
-```
+## 4. Personalized System Workflow 
 
 1.  **Input**: User types "scary movies from the 90s".
 2.  **intent_parser.py**: LLM converts this to `{"mood": "tense", "genres": ["Horror"], "year_range": [1990, 1999]}`.
