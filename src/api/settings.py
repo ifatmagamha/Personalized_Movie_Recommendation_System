@@ -1,4 +1,5 @@
-from typing import List
+from typing import List, Union
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 import os
 import json
@@ -16,7 +17,21 @@ class Settings(BaseSettings):
     APP_NAME: str = "Movie Rec API"
     ENV: str = "dev"
     ROOT_PATH: str = ""
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+    CORS_ORIGINS: Union[str, List[str]] = ["http://localhost:5173", "http://localhost:3000"]
+
+    @field_validator("CORS_ORIGINS", mode="before")
+    @classmethod
+    def parse_cors_origins(cls, v):
+        if isinstance(v, str):
+            v = v.strip()
+            if v.startswith("[") and v.endswith("]"):
+                import json
+                try:
+                    return json.loads(v)
+                except:
+                    pass
+            return [x.strip() for x in v.split(",") if x.strip()]
+        return v
     GOOGLE_API_KEY: str = ""
 
     model_config = SettingsConfigDict(

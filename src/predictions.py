@@ -17,7 +17,12 @@ class ModelPaths:
         latest_file = self.models_dir / "LATEST"
         if not latest_file.exists():
             raise FileNotFoundError(f"Missing {latest_file}. Run training first.")
-        run_dir = Path(latest_file.read_text(encoding="utf-8").strip())
+        
+        path_str = latest_file.read_text(encoding="utf-8").strip()
+        # Handle Windows backslashes if present
+        path_str = path_str.replace("\\", "/")
+        run_dir = Path(path_str)
+        
         if not run_dir.exists():
             raise FileNotFoundError(f"LATEST points to missing dir: {run_dir}")
         return run_dir

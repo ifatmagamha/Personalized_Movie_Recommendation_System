@@ -1,0 +1,21 @@
+
+ Starting LLM Intent Parsing Evaluation...
+
+[1/8] Evaluating: 'I want to cry today'
+[2/8] Evaluating: 'Something mind-blowing from the 90s'
+[3/8] Evaluating: 'Date night, nothing heavy'
+[4/8] Evaluating: 'I want something chill, a feel good recent movie'
+[5/8] Evaluating: 'scary horror movies'
+[6/8] Evaluating: '90s action packed adventure'
+[7/8] Evaluating: 'intellectual documentary about space'
+[8/8] Evaluating: 'western movies to watch tonight'
+
+========================================
+LLM Evaluation Summary
+========================================
+Total Test Cases:  8
+Mood Accuracy:     87.5%
+Genre Recall:      92.9%
+Year Accuracy:     100.0%
+========================================
+[Success]: Performance looks strong!

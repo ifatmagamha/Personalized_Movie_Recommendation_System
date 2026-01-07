@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 
 .env
+!ui/.env
 .venv/
 venv/
 
@@ -15,6 +16,9 @@ logs/
 # System logs
 *.log
 *.txt
+!requirements.txt
+!eval_results.txt
+!eval_results_fixed.txt
 
 # Build / Run Artifacts
 models/run_*
