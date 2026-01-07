@@ -392,3 +392,16 @@
 {"user_id": null, "movieId": 1198, "action": "save", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T17:09:43.138292"}
 {"user_id": null, "movieId": 1198, "action": "helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-07T17:09:44.384786"}
 {"user_id": null, "movieId": 1198, "action": "not_helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-07T17:09:45.396957"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:37:33.219526"}
+{"user_id": null, "movieId": 2571, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:37:33.224987"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:37:34.628057"}
+{"user_id": null, "movieId": 1136, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:37:34.628057"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:37:36.743762"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:37:36.743762"}
+{"user_id": null, "movieId": 1136, "action": "save", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T17:37:49.081508"}
+{"user_id": null, "movieId": 1136, "action": "helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "matches", "source": "detail"}, "_ts": "2026-01-07T17:37:50.191240"}
+{"user_id": null, "movieId": 1136, "action": "not_helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "matches", "source": "detail"}, "_ts": "2026-01-07T17:37:51.195203"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:39:04.766146"}
+{"user_id": null, "movieId": 318, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:39:04.771694"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:39:06.030241"}
+{"user_id": null, "movieId": 858, "action": "like", "context": {"moodInput": "i want to cry", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:39:06.030241"}
