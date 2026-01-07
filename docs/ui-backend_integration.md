@@ -1,4 +1,3 @@
-
 # UI–Backend Integration Traceability
 
 ## 1. Summary of Recent Fixes

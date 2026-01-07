@@ -381,3 +381,14 @@
 {"user_id": null, "movieId": 608, "action": "save", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T09:08:49.660658"}
 {"user_id": null, "movieId": 608, "action": "helpful", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "matches", "source": "detail"}, "_ts": "2026-01-07T09:08:50.821936"}
 {"user_id": null, "movieId": 608, "action": "not_helpful", "context": {"moodInput": "Date night but no horror\"", "isVoice": false, "screen": "matches", "source": "detail"}, "_ts": "2026-01-07T09:08:51.576334"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:31.419158"}
+{"user_id": null, "movieId": 2571, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:31.434036"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:32.667565"}
+{"user_id": null, "movieId": 1136, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:32.670517"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:34.013577"}
+{"user_id": null, "movieId": 1196, "action": "like", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:34.014604"}
+{"user_id": null, "movieId": 1198, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:35.282458"}
+{"user_id": null, "movieId": 1198, "action": "dislike", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "swipe"}, "_ts": "2026-01-07T17:09:35.285530"}
+{"user_id": null, "movieId": 1198, "action": "save", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "detail", "source": "detail"}, "_ts": "2026-01-07T17:09:43.138292"}
+{"user_id": null, "movieId": 1198, "action": "helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-07T17:09:44.384786"}
+{"user_id": null, "movieId": 1198, "action": "not_helpful", "context": {"moodInput": "Filtered results", "isVoice": false, "screen": "results", "source": "detail"}, "_ts": "2026-01-07T17:09:45.396957"}

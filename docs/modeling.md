@@ -2,6 +2,7 @@
 
 ## Overview
 This document describes the **training phase** of the movie recommendation system implemented so far.
+
 The objective of this phase is to move from exploratory data analysis (EDA) to **production-oriented model artifacts** that can be reliably used for inference, evaluation, and deployment.
 
 At this stage, we focused on:
@@ -35,7 +36,7 @@ The training pipeline consumes **derived datasets** produced during the preproce
   - Columns: `userId`, `movieId`, `rating`, `timestamp`
   - Filtered to remove extreme cold-start users and unstable items
 
-These datasets represent the **source of truth** for modeling.
+These datasets represent the **ground truth** for modeling.
 
 ---
 
@@ -72,7 +73,7 @@ class TrainConfig:
 # Recommendation Pipeline (Training → Prediction → Evaluation)
 
 ## 1. Goal
-Build a robust and reproducible recommendation pipeline under BigQuery read-only constraints.
+Build a robust and reproducible recommendation pipeline.
 We implement:
 - An offline training step that produces versioned model artifacts
 - An online prediction layer that loads the latest artifacts

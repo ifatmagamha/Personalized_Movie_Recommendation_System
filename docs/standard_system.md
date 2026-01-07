@@ -1,4 +1,3 @@
-
 # Standard System Description
 
 ## 1. Recommendation Logic Audit
@@ -73,6 +72,3 @@ Enhance the "Reasons" and "Search" capabilities without replacing the core CF en
     *   **LLM Role**: Generate "Why you might like this" blurb.
     *   **Implementation**: `LangChain` chain calling OpenAI/Gemini, cached by `movieId`.
 
-### Boundaries
-*   **DO NOT** use LLM to score all 10,000 movies (Cost/Latency prohibitive).
-*   **DO** use LLM to rerank or explain the top 10 candidates.
