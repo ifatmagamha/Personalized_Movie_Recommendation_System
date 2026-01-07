@@ -13,7 +13,7 @@ This project was guided by five continuously evolving dimensions. As we moved fr
 - *Evolution*: Started as "recommend movies" $\rightarrow$ Evolved to "Solving Choice Paralysis via hybrid Context + History analysis."
 
 ### 1.2 Data Availability & Quality
-**Definition**: The raw material available for the models and its readiness.
+**Definition**: The raw material availability for the models and its readiness.
 - *Evolution*: Started with raw MovieLens data $\rightarrow$ Evolved to an enriched dataset with TMDB metadata, posters, and strict filtration rules (>20 ratings) for statistical significance.
 
 ### 1.3 Success Metrics
@@ -22,10 +22,10 @@ This project was guided by five continuously evolving dimensions. As we moved fr
 
 ### 1.4 Costs & Constraints
 **Definition**: The boundaries we must operate within.
-- *Evolution*: Identified early constraints (Data cutoff at 2015, Cold Start) and engineered specific solutions (Prompt Engineering for "recent" queries, Bayesian Average for new users).
+- *Evolution*: Identified early constraints (Data cutoff at 2015, Cold Start) and engineered specific solutions.
 
 ### 1.5 Model Usage & Deployment
-**Definition**: How the intelligence is served to the end user.
+**Definition**: How the system is served to the end user.
 - *Evolution*: Shifted from a local script to a fully Dockerized, Microservices-ready architecture with Nginx and FastAPI.
 
 ---
@@ -38,7 +38,7 @@ The development followed an agile, iterative process divided into four key phase
 - **Goal**: Establish a working system without relying on user history.
 - **Iteration**: Built a Bayesian Popularity Ranking model to surface "hidden gems" rather than just blockbuster hits.
 - **Challenge**: BigQuery data was too large for local dev.
-- **Solution**: Implemented a **Parquet-based ETL pipeline** (`src/etl`) to cache data locally.
+- **Solution**: Implemented a **Parquet-based ETL pipeline** to cache data locally.
 
 ### Phase 2: Personalization (The Core Engine)
 - **Goal**: Tailor recommendations to specific user tastes.
@@ -56,7 +56,7 @@ The development followed an agile, iterative process divided into four key phase
 - **Goal**: Make the system deployable and observable.
 - **Iteration**: Dockerized the stack and built an LLMOps Dashboard.
 - **Challenge**: Docker network issues (CORS) and Windows path incompatibilities.
-- **Solution**: Refactored to `pathlib` for OS-agnostic paths and standardized CORS headers in `settings.py`.
+- **Solution**: Refactored to `pathlib` for OS-agnostic paths and standardized CORS headers in a settings file.
 
 ---
 
@@ -90,6 +90,7 @@ The development followed an agile, iterative process divided into four key phase
 ```bash
 Personalized_Movie_Recommendation_System/
 ├── data/                   # Parquet files (movies, interactions, evaluations)
+├── docs/                   # project's journal
 ├── models/                 # Serialized SVD models and config
 ├── src/
 │   ├── api/                # FastAPI application
@@ -152,7 +153,7 @@ Records user interactions for future training.
 
 ---
 
-## 7. Model Cards 🃏
+## 7. Model Cards 
 
 ### Model A: `HybridEnsemble` (Ranking)
 - **Architecture**: Matrix Factorization (SVD) + Bayesian Average (Global Prior).
@@ -189,6 +190,13 @@ Records user interactions for future training.
 ---
 
 ## 8. Engineering Challenges & Solutions 
+
+### Challenge 0: the GCP constraints
+- **Problem**: To run basically any service, it required extra privileges, which stopped us from experimenting with many more GCP products during the implementation.
+- **Solution**: 
+    - **EXPERIMENTATION**
+    - saved data locally as parquet files.
+    - searched for alternatives.
 
 ### Challenge 1: The "Hallucinating" Curator
 - **Problem**: Early LLM versions would recommend movies that didn't exist or ignore year constraints (e.g., suggesting a 2024 movie when asked for "90s").
