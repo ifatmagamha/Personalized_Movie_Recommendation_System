@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, Any
+from src.api.filters import apply_filters
 
 import numpy as np
 import pandas as pd
@@ -165,7 +166,7 @@ class Recommender:
         
         return merged
 
-    def recommend_baseline(self, user_id: Optional[int], k: int = 10) -> pd.DataFrame:
+    def recommend_baseline(self, user_id: Optional[int], k: int = 10, constraints: Optional[Dict[str, Any]] = None) -> pd.DataFrame:
         df = self.top_global.copy()
 
         if user_id is not None:
@@ -174,21 +175,35 @@ class Recommender:
             if seen:
                 df = df[~df["movieId"].isin(seen)]
 
-        df = df.head(int(k)).copy()
+        # ENRICH EARLY: Ensure genres, year, etc are available for filtering
         df = self._enrich(df)
 
-        # Keep all columns after enrichment (including poster, description, etc.)
-        # Only filter out if they don't exist
+        # Apply constraints if present
+        if constraints:
+            df = apply_filters(
+                df,
+                include_genres=constraints.get("genres_in"),
+                exclude_genres=constraints.get("genres_out"),
+                min_n_ratings=constraints.get("min_n_ratings"),
+                min_avg_rating=constraints.get("min_avg_rating"),
+                min_year=constraints.get("min_year"),
+                max_year=constraints.get("max_year"),
+                exclude_movieIds=constraints.get("exclude_movieIds")
+            )
+
+        df = df.head(int(k)).copy()
+
+        # Keep all relevant columns
         cols = [c for c in [
             "movieId", "bayes_score", "n_ratings", "avg_rating", "title", "genres",
             "poster", "backdrop", "description", "year", "rating", "duration"
         ] if c in df.columns]
         return df[cols] if cols else df
 
-    def recommend_cf(self, user_id: int, k: int = 10, candidate_pool: int = 2000)-> pd.DataFrame:
+    def recommend_cf(self, user_id: int, k: int = 10, candidate_pool: int = 2000, constraints: Optional[Dict[str, Any]] = None)-> pd.DataFrame:
         
         if not self.cf_enabled or self.cf_model is None:
-            return self.recommend_baseline(user_id=user_id, k=k)
+            return self.recommend_baseline(user_id=user_id, k=k, constraints=constraints)
 
         self._load_user_seen()
         seen = self._user_seen.get(int(user_id), set()) if self._user_seen else set()
@@ -196,6 +211,25 @@ class Recommender:
         cand = self.top_global.head(int(candidate_pool)).copy()
         if seen:
             cand = cand[~cand["movieId"].isin(seen)]
+
+        # ENRICH EARLY: Ensure genres, year, etc are available for filtering
+        cand = self._enrich(cand)
+
+        # Apply constraints to the candidate pool
+        if constraints:
+            cand = apply_filters(
+                cand,
+                include_genres=constraints.get("genres_in"),
+                exclude_genres=constraints.get("genres_out"),
+                min_n_ratings=constraints.get("min_n_ratings"),
+                min_avg_rating=constraints.get("min_avg_rating"),
+                min_year=constraints.get("min_year"),
+                max_year=constraints.get("max_year"),
+                exclude_movieIds=constraints.get("exclude_movieIds")
+            )
+
+        if cand.empty:
+            return pd.DataFrame()
 
         uid = int(user_id)
         scores = []
@@ -210,7 +244,7 @@ class Recommender:
         cand = cand.sort_values("cf_score", ascending=False).head(int(k)).copy()
         cand = self._enrich(cand)
 
-        # Keep all columns after enrichment (including poster, description, etc.)
+        # Keep all relevant columns
         cols = [c for c in [
             "movieId", "cf_score", "bayes_score", "n_ratings", "avg_rating", "title", "genres",
             "poster", "backdrop", "description", "year", "rating", "duration"
@@ -218,19 +252,19 @@ class Recommender:
         return cand[cols] if cols else cand
 
 
-    def recommend(self, user_id: Optional[int], k: int = 10, mode: str = "auto", candidate_pool: int = 2000) -> pd.DataFrame:
+    def recommend(self, user_id: Optional[int], k: int = 10, mode: str = "auto", candidate_pool: int = 2000, constraints: Optional[Dict[str, Any]] = None) -> pd.DataFrame:
         mode = (mode or "auto").lower()
         if mode == "baseline":
-            return self.recommend_baseline(user_id=user_id, k=k)
+            return self.recommend_baseline(user_id=user_id, k=k, constraints=constraints)
         if mode == "cf":
             # CF requires a valid user_id, use -1 as fallback if None
             uid = user_id if user_id is not None else -1
-            return self.recommend_cf(user_id=uid, k=k, candidate_pool=candidate_pool)
+            return self.recommend_cf(user_id=uid, k=k, candidate_pool=candidate_pool, constraints=constraints)
 
         # auto mode: use CF if available and user_id provided, else baseline
         if self.cf_enabled and self.cf_model is not None and user_id is not None:
-            return self.recommend_cf(user_id=user_id, k=k, candidate_pool=candidate_pool)
-        return self.recommend_baseline(user_id=user_id, k=k)
+            return self.recommend_cf(user_id=user_id, k=k, candidate_pool=candidate_pool, constraints=constraints)
+        return self.recommend_baseline(user_id=user_id, k=k, constraints=constraints)
 
 def load_recommender(
     models_dir: str = "models",

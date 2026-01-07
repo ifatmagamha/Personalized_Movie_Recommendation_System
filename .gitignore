@@ -11,3 +11,16 @@ venv/
 
 logs/
 .pytest_cache/
+
+# System logs
+*.log
+*.txt
+
+# Build / Run Artifacts
+models/run_*
+data/feedback.jsonl
+data/interactions.parquet
+node_modules/
+dist/
+build/
+.next/

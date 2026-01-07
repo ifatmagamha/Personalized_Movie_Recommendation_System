@@ -15,9 +15,18 @@ def apply_filters(
     exclude_genres: Optional[Iterable[str]] = None,
     min_n_ratings: Optional[int] = None,
     min_avg_rating: Optional[float] = None,
+    min_year: Optional[int] = None,
+    max_year: Optional[int] = None,
     exclude_movieIds: Optional[Iterable[int]] = None,
 ) -> pd.DataFrame:
     out = df.copy()
+
+    # Year filters
+    if "year" in out.columns:
+        if min_year is not None:
+            out = out[out["year"] >= int(min_year)]
+        if max_year is not None:
+            out = out[out["year"] <= int(max_year)]
 
     # exclude already swiped
     if exclude_movieIds and "movieId" in out.columns:

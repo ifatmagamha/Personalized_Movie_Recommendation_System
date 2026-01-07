@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 class RecommendRequest(BaseModel):
     user_id: Optional[int] = Field(default=None, description="User id for personalized mode (CF)")
     query: str = Field(default="", description="Free text (LLM later / optional)")
-    k: int = Field(default=10, ge=1, le=50)
+    k: int = Field(default=5, ge=1, le=50)
     mode: Literal["baseline", "cf", "auto"] = "auto"
     candidate_pool: int = Field(default=2000, ge=100, le=20000)
 

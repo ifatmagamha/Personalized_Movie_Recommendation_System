@@ -5,13 +5,14 @@ import { HomeScreen } from "./components/HomeScreen";
 import { MoodInput } from "./components/MoodInput";
 import { ExploreFilters, FilterState } from "./components/ExploreFilters";
 import { ResultsScreen } from "./components/ResultsScreen";
+import { MatchesScreen } from "./components/MatchesScreen";
 import { MovieDetail } from "./components/MovieDetail";
 
 import { recommend, sendFeedback } from "@/lib/api";
 import { mapMovieRecToUI } from "@/lib/mappers";
 import type { MovieUI } from "@/app/types";
 
-type AppScreen = "home" | "mood-input" | "explore-filters" | "results";
+type AppScreen = "home" | "mood-input" | "explore-filters" | "results" | "matches";
 
 type ActionType = "like" | "dislike" | "save" | "skip" | "helpful" | "not_helpful";
 
@@ -48,7 +49,7 @@ export default function App() {
       const res = await recommend({
         user_id: userId,
         query: input,
-        k: 12,
+        k: 5,
         mode: "auto",
         candidate_pool: 2000,
       });
@@ -74,7 +75,7 @@ export default function App() {
     try {
       const res = await recommend({
         user_id: userId,
-        k: 48,
+        k: 5,
         mode: filters.isPersonalized ? "cf" : "baseline",
         candidate_pool: 5000,
         constraints: {
@@ -129,16 +130,16 @@ export default function App() {
   // Refine recommendations based on swipe feedback
   const refineRecommendations = async () => {
     if (loading) return; // Prevent concurrent requests
-    
+
     setLoading(true);
     setErrorMsg(null);
 
     try {
       const likedGenres = extractGenresFromLiked(likedMovieIds);
-      
+
       const res = await recommend({
         user_id: userId,
-        k: 12,
+        k: 5,
         mode: "auto",
         candidate_pool: 2000,
         constraints: {
@@ -148,7 +149,7 @@ export default function App() {
       });
 
       const newMovies = (res.recommendations ?? []).map(mapMovieRecToUI);
-      
+
       // Append new movies, avoiding duplicates
       setRecommendedMovies(prev => {
         const existingIds = new Set(prev.map(m => m.movieId));
@@ -170,7 +171,7 @@ export default function App() {
   ) => {
     // Track swiped movies
     setSwipedMovieIds(prev => new Set([...prev, movieId]));
-    
+
     if (action === "like") {
       setLikedMovieIds(prev => new Set([...prev, movieId]));
     }
@@ -184,8 +185,10 @@ export default function App() {
 
     // If near end of recommendations and should refine, fetch more
     if (shouldRefine && currentScreen === "results") {
-      const remaining = recommendedMovies.length - swipedMovieIds.size - 1; // -1 for current swipe
-      if (remaining <= 3) {
+      const remaining = recommendedMovies.length - swipedMovieIds.size - 1;
+      // Trigger when 1 card is remaining in the stack
+      if (remaining <= 1) {
+        console.log("[INFO] Batch depleted, refining...");
         await refineRecommendations();
       }
     }
@@ -236,6 +239,18 @@ export default function App() {
               const shouldRefine = context?.shouldRefine ?? false;
               handleSwipeAction(movieId, action as "like" | "dislike" | "skip", shouldRefine);
             }}
+            onShowMatches={() => setCurrentScreen("matches")}
+            likedCount={likedMovieIds.size}
+          />
+        )}
+
+        {currentScreen === "matches" && (
+          <MatchesScreen
+            key="matches"
+            movies={recommendedMovies.filter((m) => likedMovieIds.has(m.movieId))}
+            suggestedRecommendations={recommendedMovies.filter((m) => !swipedMovieIds.has(m.movieId))}
+            onBack={() => setCurrentScreen("results")}
+            onSelectMovie={handleMovieSelect}
           />
         )}
       </AnimatePresence>

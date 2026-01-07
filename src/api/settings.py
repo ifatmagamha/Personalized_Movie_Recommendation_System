@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     ENV: str = "dev"
     ROOT_PATH: str = ""
     CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+    GOOGLE_API_KEY: str = ""
 
     model_config = SettingsConfigDict(
         env_file=".env" if os.path.exists(".env") else None,

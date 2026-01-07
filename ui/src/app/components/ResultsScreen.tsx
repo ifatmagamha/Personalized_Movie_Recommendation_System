@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, PanInfo } from "framer-motion";
+import { motion, useMotionValue, useTransform, PanInfo, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Heart, X, Bookmark } from "lucide-react";
 import { useState } from "react";
 import type { MovieUI } from "@/app/types";
@@ -20,6 +20,8 @@ interface ResultsScreenProps {
     action: ActionType;
     context?: any;
   }) => void;
+  onShowMatches?: () => void;
+  likedCount?: number;
 }
 
 export function ResultsScreen({
@@ -31,6 +33,8 @@ export function ResultsScreen({
   loading = false,
   errorMsg = null,
   onAction,
+  onShowMatches,
+  likedCount = 0,
 }: ResultsScreenProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedMovies, setLikedMovies] = useState<Set<number>>(new Set());
@@ -81,17 +85,17 @@ export function ResultsScreen({
   };
 
   const handleSwipeComplete = (direction: "left" | "right" | "up" | "down", movieId: number) => {
-    const action = direction === "right" ? "like" : 
-                   direction === "left" ? "dislike" : "skip";
-    
+    const action = direction === "right" ? "like" :
+      direction === "left" ? "dislike" : "skip";
+
     if (direction === "right") handleLike(movieId);
     else if (direction === "left") handleDislike(movieId);
     else fireAction(movieId, "skip");
-    
+
     // Check if we should trigger refinement (when 3 or fewer movies remain)
     const remaining = movies.length - currentIndex - 1;
     const shouldRefine = remaining <= 3;
-    
+
     // Notify parent about swipe with refinement flag
     onAction?.({
       movieId,
@@ -104,7 +108,7 @@ export function ResultsScreen({
         shouldRefine,
       },
     });
-    
+
     // Advance to next movie
     if (currentIndex < movies.length - 1) {
       setTimeout(() => setCurrentIndex(currentIndex + 1), 300);
@@ -230,6 +234,26 @@ export function ResultsScreen({
           </motion.div>
         )}
       </div>
+
+      {/* Floating CTA for Matches */}
+      <AnimatePresence>
+        {likedCount > 0 && (
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 100, opacity: 0 }}
+            className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-6 w-full max-w-xs"
+          >
+            <button
+              onClick={onShowMatches}
+              className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-2xl shadow-purple-500/40 font-medium flex items-center justify-center gap-2 hover:scale-105 transition-transform"
+            >
+              <Heart className="w-4 h-4 fill-current" />
+              Show My Matches ({likedCount})
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -364,11 +388,10 @@ function EditorialCard({
                 e.stopPropagation();
                 onDislike(movie.movieId);
               }}
-              className={`p-3 border transition-all ${
-                isDisliked
-                  ? "border-blue-500 bg-blue-500 text-white shadow-lg shadow-blue-500/30"
-                  : "border-neutral-300 text-neutral-600 hover:border-blue-500 hover:text-blue-500"
-              }`}
+              className={`p-3 border transition-all ${isDisliked
+                ? "border-blue-500 bg-blue-500 text-white shadow-lg shadow-blue-500/30"
+                : "border-neutral-300 text-neutral-600 hover:border-blue-500 hover:text-blue-500"
+                }`}
             >
               <X className="w-5 h-5" />
             </button>
@@ -378,11 +401,10 @@ function EditorialCard({
                 e.stopPropagation();
                 onLike(movie.movieId);
               }}
-              className={`p-3 border transition-all ${
-                isLiked
-                  ? "border-pink-500 bg-pink-500 text-white shadow-lg shadow-pink-500/30"
-                  : "border-neutral-300 text-neutral-600 hover:border-pink-500 hover:text-pink-500"
-              }`}
+              className={`p-3 border transition-all ${isLiked
+                ? "border-pink-500 bg-pink-500 text-white shadow-lg shadow-pink-500/30"
+                : "border-neutral-300 text-neutral-600 hover:border-pink-500 hover:text-pink-500"
+                }`}
             >
               <Heart className="w-5 h-5" />
             </button>
@@ -392,11 +414,10 @@ function EditorialCard({
                 e.stopPropagation();
                 onSave(movie.movieId);
               }}
-              className={`p-3 border transition-all ${
-                isSaved
-                  ? "border-purple-500 bg-purple-500 text-white shadow-lg shadow-purple-500/30"
-                  : "border-neutral-300 text-neutral-600 hover:border-purple-500 hover:text-purple-500"
-              }`}
+              className={`p-3 border transition-all ${isSaved
+                ? "border-purple-500 bg-purple-500 text-white shadow-lg shadow-purple-500/30"
+                : "border-neutral-300 text-neutral-600 hover:border-purple-500 hover:text-purple-500"
+                }`}
             >
               <Bookmark className="w-5 h-5" />
             </button>

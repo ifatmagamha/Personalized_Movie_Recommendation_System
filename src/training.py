@@ -17,7 +17,7 @@ class TrainConfig:
     interactions_path: str = "data/interactions.parquet"
     movies_path: Optional[str] = "data/movies.parquet"  
     out_dir: str = "models"
-    topn: int = 200
+    topn: int = 2000
     min_ratings: int = 20  # stability for popularity table
     bayes_m: int = 50      # Bayesian smoothing strength (m)
     seed: int = 42
