@@ -18,7 +18,15 @@ This project was guided by five continuously evolving dimensions. As we moved fr
 
 ### 1.3 Success Metrics
 **Definition**: How we measure if we are winning.
-- *Evolution*: Moved from simple "it works" to quantifiable targets: **Recall@10 > 0.15** (Ranking Quality), **Mood Detection > 85%** (Relevance), and **Response Time < 200ms** (Performance).
+- *Evolution*: Moved from simple "it works" to quantifiable targets:
+
+  **Recall@10 > 0.15** (Ranking Quality),
+  **Mood Detection > 85%** (Relevance),
+  and **Response Time < 200ms** (Performance).
+
+- **Recall@K**: We chose this to measure **coverage**. It answers: "Out of all the movies the user actually watched and liked, how many did we manage to find in our top K recommendations?" It's crucial for ensuring we don't miss relevant content.
+  
+- **NDCG@K (Normalized Discounted Cumulative Gain)**: We chose this to measure **ranking quality**. It answers: "Did we put the most relevant movies at the very top?" It gives a higher score when a good movie is #1 vs #10, which matches how users browse (they look at the top first).
 
 ### 1.4 Costs & Constraints
 **Definition**: The boundaries we must operate within.
