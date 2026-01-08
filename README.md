@@ -91,6 +91,20 @@ The development followed an agile, iterative process divided into four key phase
     *   Filters these candidates to match the `year_range` and `genres`.
 4.  **Output**: Returns the top 5 matching movies.
 
+**workflow:**
+
+   graph TD
+    A[User Request] -->|Natural Language| B(LLM Intent Parser);
+    B -->|Generates JSON| C{Reasoning Engine};
+    C -->|Extracts Constraints| D[Hybrid Recommender];
+    D -->|User History > 5?| E{Check Profile};
+    E -- Yes --> F[SVD Model];
+    E -- No --> G[Bayesian Baseline];
+    F & G --> H[Top-K Candidates];
+    H -->|Apply JSON Filters| I[Final Ranking];
+    I -->|Enrich Metadata| J[JSON Response];
+
+
 ---
 
 ## 5. Project Structure 
